@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         userAction.addTarget(self, action: #selector(ViewController.onPress), for: .touchUpInside)
     }
     func isPrime(_ num: Int) -> Bool {
-        for let i in 2...Int(floor(Double(sqrt(Float(num))))) {
+        for var i in 2...Int(floor(Double(sqrt(Float(num))))) {
             if (num % i == 0) {
                 return false
             }
